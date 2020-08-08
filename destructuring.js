@@ -23,7 +23,14 @@ var carDetails = {
 
 //Code Here
 
+const { color } = carDetails
+const { make } = carDetails
+const { model } = carDetails
+const { year } = carDetails
 
+// console.log(color)
+
+// const{color: carDetailscolor, make: carDetailsmake, model: carDetailsmodel, year: carDetailsyear} = carDetails
 
 ////////// PROBLEM 2 //////////
 
@@ -33,9 +40,11 @@ var carDetails = {
   The property names are firstName, lastName, and title.
 */
 
-function greeting( obj ) {
+function greeting(obj) {
   //Code Here
-  
+  let title = obj.title;
+  let firstName = obj.firstName;
+  let lastName = obj.lastName;
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -55,7 +64,13 @@ function greeting( obj ) {
 
 //Code Here
 
-
+const totalPopulation = (obj) => {
+  let utah = obj.utah
+  let california = obj.california
+  let texas = obj.texas
+  let arizona = obj.arizona
+  return utah + california + texas + arizona
+}
 
 ////////// PROBLEM 4 //////////
 
@@ -68,8 +83,14 @@ function greeting( obj ) {
 */
 
 //Code Here
-
-
+const ingredients = (obj) => {
+  let carb = obj.carb
+  let fat = obj.fat
+  let protein = obj.protein
+  let newArr = []
+  newArr.push(carb, fat, protein)
+  return newArr
+}
 
 ////////// PROBLEM 5 //////////
 
@@ -87,8 +108,16 @@ function greeting( obj ) {
 
 //Code Here
 
-
-
+const largeNumbers = ({ first, second, third }) => {
+  console.log(first)
+  console.log(second)
+  console.log(third)
+  if (first < second && first < third)
+    return first
+  else if (second < first && second < third)
+    return second
+  else return third
+}
 ////////// PROBLEM 6 //////////
 
 /*
@@ -98,5 +127,11 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+const numberGroups = ({ a, b, c }) => {
+  if (a.length > b.length && a.length > c.length)
+    return a
+  else if (b.length > a.length && b.length > c.length)
+    return b
+  else return c
+}
 

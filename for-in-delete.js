@@ -105,13 +105,14 @@ const double = (obj) => {
 
 //Code Here
 
-let empStr = ""
 const secrets = (obj) => {
-  for (let key in obj)
-    if (obj[key].startswith('sh'))
-      return obj[key] += ''
-
-  console.log(obj[key])
+  let empStr = ""
+  for (let key in obj) {
+    if (key.startsWith('sh')) {
+      empStr += obj[key]
+    }
+  }
+  return empStr
 }
 
 
@@ -185,11 +186,10 @@ for (var key in deleteTheBigNumbers)
 //Code Here
 
 const startsWithK = (obj) => {
-  for (let key in obj)
-  if (obj[key].startswith('k'))
-  delete obj[key]
-  console.log(obj)
-
+  for (let key in obj){
+    if(key.startsWith('k'))
+      delete obj[key]
+  }
   return obj
 }
 
